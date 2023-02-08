@@ -1,0 +1,45 @@
+{
+  "name": "sisux-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "watch": "tsc && vite build --watch",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^2.32.2",
+    "@azure/msal-react": "^1.5.2",
+    "react": "^16.8.0 || 17.x || 18.x",
+    "react-dom": "^16.8.0 || 17.x || 18.x"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.19",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@azure/msal-browser": "^2.32.0",
+    "@azure/msal-react": "^1.5.0",
+    "react": "^16.8.0 || 17.x || 18.x",
+    "react-dom": "^16.8.0 || 17.x || 18.x"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sisux-react.umd.js",
+  "module": "./dist/sisux-react.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sisux-react.es.js",
+      "require": "./dist/sisux-react.umd.js"
+    }
+  }
+}
